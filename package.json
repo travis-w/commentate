@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "rollup --config config/rollup.config.js",
+    "dev": "rollup --config config/rollup.config.dev.js",
     "commit": "cz"
   },
   "repository": {
@@ -24,7 +25,8 @@
     "@rollup/plugin-node-resolve": "^9.0.0",
     "commitizen": "^4.2.1",
     "cz-conventional-changelog": "^3.3.0",
-    "rollup": "^2.28.2"
+    "rollup": "^2.28.2",
+    "rollup-plugin-serve": "^1.0.4"
   },
   "config": {
     "commitizen": {
@@ -32,12 +34,9 @@
     }
   },
   "dependencies": {
-    "@babel/plugin-syntax-jsx": "^7.10.4",
     "@babel/plugin-transform-react-jsx": "^7.10.4",
     "@babel/plugin-transform-runtime": "^7.11.5",
-    "@babel/preset-react": "^7.10.4",
     "jsx-pragmatic": "^2.0.19",
-    "moment": "^2.29.0",
     "rollup-plugin-commonjs": "^10.1.0"
   }
 }

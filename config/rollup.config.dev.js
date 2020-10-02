@@ -26,6 +26,8 @@ export default {
     resolve(),
     babel({ babelHelpers: 'inline' }),
     commonjs(),
-    serve('dev-server')
+    serve({
+      contentBase: ['dist', 'dev-server']
+    })
   ]
 };

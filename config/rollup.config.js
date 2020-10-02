@@ -24,6 +24,6 @@ export default {
   plugins: [
     resolve(),
     babel({ babelHelpers: 'inline' }),
-    commonjs(),
+    commonjs()
   ]
 };
