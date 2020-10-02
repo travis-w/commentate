@@ -30,5 +30,14 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "@babel/plugin-syntax-jsx": "^7.10.4",
+    "@babel/plugin-transform-react-jsx": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "jsx-pragmatic": "^2.0.19",
+    "moment": "^2.29.0",
+    "rollup-plugin-commonjs": "^10.1.0"
   }
 }
