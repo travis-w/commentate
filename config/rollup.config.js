@@ -31,7 +31,7 @@ export default {
   plugins: [
     resolve(),
     commonjs(),
-    typescript(),
+    typescript({ jsx: 'react' }),
     babel({ babelHelpers: 'bundled' })
   ]
 };

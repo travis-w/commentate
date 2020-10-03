@@ -32,7 +32,7 @@ export default {
   plugins: [
     resolve(),
     commonjs(),
-    typescript({ jsx: 'preserve' }),
+    typescript({ jsx: 'react' }),
     babel({ babelHelpers: 'bundled' }),
     serve({
       contentBase: ['dist', 'dev-server']
