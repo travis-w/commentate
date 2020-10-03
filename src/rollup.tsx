@@ -1,12 +1,13 @@
-/* @jsx node */
+/** @jsx node */
 
 // @ts-ignore
-import jsxPrag from 'jsx-pragmatic';
+import { node, dom } from 'jsx-pragmatic';
+// import jsxPrag from 'jsx-pragmatic';
 // const jsxPrag = require('jsx-pragmatic');
 import testFile2 from './test';
 // const testFile2 = require('./test');
-const node = jsxPrag.node;
-const dom = jsxPrag.dom;
+// const node = jsxPrag.node;
+// const dom = jsxPrag.dom;
 
 let test = {
   a: 1,
@@ -23,7 +24,6 @@ console.log({
   ...testFile2
 })
 
-console.log(jsxPrag);
 
 function getEl() {
   return (

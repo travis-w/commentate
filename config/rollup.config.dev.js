@@ -3,7 +3,6 @@ import commonjs from '@rollup/plugin-commonjs';
 import babel from '@rollup/plugin-babel';
 import typescript from '@rollup/plugin-typescript';
 import serve from "rollup-plugin-serve";
-import jsx from 'acorn-jsx';
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx', '.es6', '.es', '.mjs'];
 
@@ -25,9 +24,6 @@ export default {
       file: 'dist/rollup.es.js',
       format: 'es'
     }
-  ],
-  acornInjectPlugins: [
-    jsx()
   ],
   plugins: [
     resolve(),
