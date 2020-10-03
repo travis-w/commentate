@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rollup --config config/rollup.config.js",
+    "build:js": "rollup --config config/rollup.config.js",
+    "build:types": "tsc -d --declarationDir dist/types --emitDeclarationOnly",
     "dev": "rollup --config config/rollup.config.dev.js",
-    "commit": "cz"
+    "commit": "cz",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch"
   },
   "repository": {
     "type": "git",
@@ -20,23 +23,26 @@
   "homepage": "https://github.com/travis-w/commentate#readme",
   "devDependencies": {
     "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-react-jsx": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.11.5",
     "@babel/preset-env": "^7.11.5",
+    "@babel/preset-typescript": "^7.10.4",
     "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-commonjs": "^15.1.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-typescript": "^6.0.0",
+    "@tsconfig/recommended": "^1.0.1",
     "commitizen": "^4.2.1",
     "cz-conventional-changelog": "^3.3.0",
+    "jsx-pragmatic": "^2.0.19",
     "rollup": "^2.28.2",
-    "rollup-plugin-serve": "^1.0.4"
+    "rollup-plugin-serve": "^1.0.4",
+    "tslib": "^2.0.1",
+    "typescript": "^4.0.3"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "dependencies": {
-    "@babel/plugin-transform-react-jsx": "^7.10.4",
-    "@babel/plugin-transform-runtime": "^7.11.5",
-    "jsx-pragmatic": "^2.0.19",
-    "rollup-plugin-commonjs": "^10.1.0"
   }
 }

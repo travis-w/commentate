@@ -12,6 +12,8 @@ let test = {
   b: 2,
 }
 
+let x: number = 12;
+
 console.log({
   ...test
 })
