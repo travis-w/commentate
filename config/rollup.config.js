@@ -6,7 +6,7 @@ import typescript from '@rollup/plugin-typescript';
 const extensions = ['.js', '.jsx', '.ts', '.tsx', '.es6', '.es', '.mjs'];
 
 export default {
-  input: 'src/rollup.ts',
+  input: 'src/rollup.tsx',
   // Messing around with different output types. May need differnet input depending on format
   // Also need to do research on which formats we should build
   output: [
