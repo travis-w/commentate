@@ -1,5 +1,6 @@
 /* @jsx node */
 
+// @ts-ignore
 import jsxPrag from 'jsx-pragmatic';
 // const jsxPrag = require('jsx-pragmatic');
 import testFile2 from './test';
