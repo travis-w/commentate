@@ -2,11 +2,17 @@
   "name": "commentate",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/commentate.cjs.js",
+  "module": "dist/commentate.esm.js",
+  "browser": "dist/commentate.umd.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build:js": "rollup --config config/rollup.config.js",
     "build:types": "tsc -d --declarationDir dist/types --emitDeclarationOnly",
-    "dev": "rollup --config config/rollup.config.dev.js",
+    "dev": "rollup --config config/rollup.config.dev.js -w",
     "commit": "cz",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch"
