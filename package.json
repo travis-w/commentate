@@ -32,6 +32,7 @@
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@rollup/plugin-typescript": "^6.0.0",
     "@tsconfig/recommended": "^1.0.1",
+    "acorn-jsx": "^5.3.1",
     "commitizen": "^4.2.1",
     "cz-conventional-changelog": "^3.3.0",
     "jsx-pragmatic": "^2.0.19",

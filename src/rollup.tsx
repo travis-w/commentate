@@ -1,4 +1,4 @@
-/* @jsx node */
+
 
 // @ts-ignore
 import jsxPrag from 'jsx-pragmatic';
