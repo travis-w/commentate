@@ -11,9 +11,13 @@ class ActionButton {
 
     init() {
         console.log('fuck yeah');
-        document.body.append((
-            <div>Test</div>
-        ).render(dom()));
+        document.body.append(this.render());
+    }
+
+    private render() {
+        return (
+            <div class={'cmt_action-button'}>Test</div>
+        ).render(dom());
     }
 }
 

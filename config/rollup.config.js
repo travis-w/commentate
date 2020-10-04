@@ -3,6 +3,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import babel from '@rollup/plugin-babel';
 import typescript from '@rollup/plugin-typescript';
 import pkg from '../package.json';
+import scss from "rollup-plugin-scss";
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx', '.es6', '.es', '.mjs'];
 
@@ -15,7 +16,7 @@ export default [
       {
         file: pkg.browser,
         format: 'umd',
-        name: 'commentate'
+        name: 'Commentate'
       },
       {
         file: pkg.main,
@@ -30,7 +31,10 @@ export default [
       resolve(),
       commonjs(),
       typescript({jsx: 'react'}),
-      babel({babelHelpers: 'bundled'})
+      babel({babelHelpers: 'bundled'}),
+      scss({
+        output: 'css/commentate.css'
+      }),
     ]
   }
 ];

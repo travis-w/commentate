@@ -1,5 +1,7 @@
 import ActionButton from './ActionButton';
 
+import '../scss/main.scss';
+
 class Commentate {
     actionButton: ActionButton;
 

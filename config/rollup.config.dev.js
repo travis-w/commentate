@@ -2,7 +2,8 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import babel from '@rollup/plugin-babel';
 import typescript from '@rollup/plugin-typescript';
-import serve from "rollup-plugin-serve";
+import serve from 'rollup-plugin-serve';
+import scss from  'rollup-plugin-scss';
 import pkg from '../package.json';
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx', '.es6', '.es', '.mjs'];
@@ -16,7 +17,7 @@ export default [
       {
         file: pkg.browser,
         format: 'umd',
-        name: 'commentate'
+        name: 'Commentate'
       },
       {
         file: pkg.main,
@@ -32,8 +33,12 @@ export default [
       commonjs(),
       typescript({jsx: 'react'}),
       babel({babelHelpers: 'bundled'}),
+      scss({
+        output: 'css/commentate.css',
+        watch: 'scss'
+      }),
       serve({
-        contentBase: ['dist', 'dev-server']
+        contentBase: ['dist', 'dev-server', 'css']
       })
     ]
   }
